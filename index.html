@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+
+
+<body>
+    <!--Atividade 01 -->
+    <h1>Atividade 01 </h1>
+    <div id="paragrafo"></div>
+    <hr>
+
+    <!--Atividade 02 -->
+    <h1>Atividade 02 </h1>
+    <div id="tres"></div>
+    <hr>
+
+    <!--Atividade 03 -->
+    <h1>Atividade 03 </h1>
+    <ul id="lista">
+    </ul>
+<hr>
+
+    <!--Atividade 04 -->
+    <h1>Atividade 04 </h1>
+     <ul id="lista1">
+    </ul>
+<hr>
+
+    <!--Atividade 05 (Removi o ome do Seu Jorge)-->
+    <h1>Atividade 05 </h1>
+    <div id="paragrafos">
+        <p>Zeca Pagodinho</p>
+        <p>Seu Jorge</p>
+    </div>
+<hr>
+
+    <!--Atividade 06 (Removi o nome do Zeca Pagodinho)-->
+    <h1>Atividade 06 </h1>
+        <div id="container">
+        <p>Zeca Pagodinho</p>
+        <p>Seu Jorge</p>
+        <p>Vanessa da Mata</p>
+    </div>
+<hr>
+
+    <!--Atividade 07 (Removi o nome do Frajola)-->
+    <h1>Atividade 07</h1>
+    <ul id="gatos">
+        <li>Salem</li>
+        <li>Apolo</li>
+        <li>Piter Ferreira Junior</li>
+        <li>Frajola</li>
+    </ul>
+<hr>
+
+    <!--Atividade 08 (Removi a música Pink Venom)-->
+    <h1>Atividade 08 </h1>
+    <div id="area">
+        <p>Shut Down</p>
+        <p>Pink Venom</p>
+        <p>Hard To Love</p>
+    </div>
+<hr>
+
+    <!--Atividade 09 -->
+    <h1>Atividade 09 </h1>
+        <div id="blocos">
+        <div class="bloco" style="background-color: red;">Bloco 1</div>
+        <div class="bloco" style="background-color: green;">Bloco 2</div>
+        <div class="bloco" style="background-color: blue;">Bloco 3</div>
+        <div class="bloco" style="background-color: orange;">Bloco 4</div>
+        <div class="bloco" style="background-color: purple;">Bloco 5</div>
+    </div>
+<hr>
+
+    <!--Atividade 10 -->
+    <h1>Atividade 10</h1>
+    <div id="ad"></div>
+
+<script>
+     //Atividade 01
+        let paragrafo = document.getElementById('paragrafo');
+        let p = document.createElement("p");
+        p.textContent = "Elemento criado dinamicamente com JavaScript.";
+        paragrafo.appendChild(p);
+
+
+        //Atividade 02
+        let tres = document.getElementById('tres');
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+        let p3 = document.createElement("p");
+        p1.textContent = "A Alice caiu no buraco !!";
+        p2.textContent = "O coelho a empurrou!!";
+        p3.textContent = "O Abisalem viu tudo :o";
+        tres.appendChild(p1);
+        tres.appendChild(p2);
+        tres.appendChild(p3);
+
+
+        //Atividade 03
+        let lista = document.getElementById('lista');
+        let l1 = document.createElement("li");
+        let l2 = document.createElement("li");
+        let l3 = document.createElement("li");
+        l1.innerText = "Labubu";
+        l2.innerText = "Bobbie Goods";
+        l3.innerText = "Morango do Amor";
+        lista.appendChild(l1);
+        lista.appendChild(l2);
+        lista.appendChild(l3);
+       
+
+
+        //Atividade 04
+        let lista1 = document.getElementById('lista1');
+        let f1 = document.createElement("li");
+        let f2 = document.createElement("li");
+        let f3 = document.createElement("li");
+        let f4 = document.createElement("li");
+        let f5 = document.createElement("li");
+        f1.innerText = "Abacaxi";
+        f2.innerText = "Banana";
+        f3.innerText = "Caju";
+        f4.innerText = "Manga";
+        f5.innerText = "Morango ";
+        lista1.appendChild(f1);
+        lista1.appendChild(f2);
+        lista1.appendChild(f3);
+        lista1.appendChild(f4);
+        lista1.appendChild(f5);
+
+         //Atividade 05
+        let paragrafos = document.getElementById("paragrafos")
+        let paragrafo2 = paragrafos.lastElementChild;
+        if (paragrafo2){
+            paragrafos.removeChild(paragrafo2);
+        }
+
+        //Atividade 06
+        const container = document.getElementById("container");
+        const paragrafo1 = container.getElementsByTagName("p") [0];
+        container.removeChild(paragrafo1);
+       
+        //Atividade 07
+        let gatos = document.getElementById("gatos");
+        let opcao = gatos.lastElementChild;
+        gatos.removeChild(opcao);
+
+        //Atividade 08
+        let area = document.getElementById("area");
+        let meio = area.getElementsByTagName("p") [1];
+        area.removeChild(meio);
+
+        //Atividade 09
+        const blocos = document.getElementById("blocos");
+        while (blocos.firstChild){
+            blocos.removeChild(blocos.firstChild);
+        }
+
+       // Atividade 10
+       let ad = document.getElementById("ad")
+       
+       let t = document.createElement("p");
+       let h = document.createElement("h2");
+       t.textContent = "O paragrafo da div vazia.";
+       h.textContent = "TÍTULO";
+       ad.appendChild(h);
+       ad.appendChild(t);
+       ad.removeChild(h);
+
+</script>
+</body>
+
+
+</html>
+

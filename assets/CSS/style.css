@@ -1,0 +1,10 @@
+        .bloco {
+            width: 150px;
+            height: 80px;
+            margin: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
